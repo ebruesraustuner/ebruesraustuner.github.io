@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import '../Abstracts/mixins.scss';
+
+$font:  'Source Sans Pro', sans-serif;;
+
+
+h1 {
+    font-size: 2.6em;
+    font-style: semibold;
+    margin: 24px;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 24px;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-family: $font;
+    font-weight: 600;
+    margin: 0.4em;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 24px;
+    line-height: 1.6;
+    @include breakpoint(mobile) {
+        font-size: 14px;
+    }
+
+}

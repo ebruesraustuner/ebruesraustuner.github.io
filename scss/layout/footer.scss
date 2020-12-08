@@ -1,0 +1,15 @@
+
+            .footer {
+                display: flex;
+                flex-basis: 100%;
+                justify-content: center;
+
+                p {
+
+                    &:nth-last-child(1){
+                        border-left: 2px solid $purple;
+                        padding-left: 8px;
+                    }
+                }
+
+            }

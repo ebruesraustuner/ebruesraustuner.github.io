@@ -1,0 +1,44 @@
+
+/* breakpoints */
+@mixin breakpoint($point) {
+    @if $point==desktop {
+        @media (min-width: 70em) {
+            @content;
+        }
+    }
+
+    @else if $point==laptop {
+        @media (min-width: 64em) {
+            @content;
+        }
+    }
+
+    @else if $point==tablet {
+        @media (max-width: 50em) {
+            @content;
+        }
+    }
+
+    @else if $point==phablet {
+        @media (min-width: 37.5em) {
+            @content;
+        }
+    }
+
+    @else if $point==mobile {
+        @media (max-width: 37.5em) {
+            @content;
+        }
+    }
+}
+
+/* last child */
+@mixin last-child() {
+    &:last-of-type {
+        @content
+    }
+}
+
+@mixin transition($transition) {
+    transition: all .2s ease-in-out;
+}

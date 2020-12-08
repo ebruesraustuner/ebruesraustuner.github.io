@@ -1,0 +1,70 @@
+@import '../Base/colors.scss';
+
+.button {
+    text-align: center;
+    padding: .75rem;
+    background: $background;
+    border: solid $background;
+    border-radius: 16px;
+    box-shadow: 20px 20px 50px #b0bec5cc, inset -2px -2px 20px #fff,
+        inset 2px 2px 20px #b0bec5cc;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $blue;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:after {
+        content: "";
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: -28px -28px 60px $white;
+    }
+
+    &:hover {
+        box-shadow: inset 1px 1px 20px #b0bec5cc, inset -1px -1px 12px #fff,
+            -28px -28px 60px #fff, 20px 20px 50px #b0bec5cc;
+    }
+
+    &-square {
+        width: 24px;
+        height: 24px;
+        @include breakpoint(mobile) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &-rectangle {
+        width: auto;
+        height: 24px;
+        
+    }
+    &.bottom-right {
+        position: fixed;
+        right: 56px;
+        bottom: 56px;
+    }
+
+    &.bottom-left {
+        position: fixed;
+        left: 56px;
+        bottom: 56px;
+    }
+    img {
+        filter: saturate(0%) grayscale(100%) brightness(69%) contrast(1000%);
+        -webkit-filter: saturate(0%) grayscale(100%) brightness(69%) contrast(1000%);
+    }
+   
+}
+ .margin {
+        margin: 16px 0;
+    }
