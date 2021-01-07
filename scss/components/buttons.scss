@@ -10,6 +10,25 @@ button {
         text-decoration: none;
     }
 
+    &:focus {
+        border: 1px solid $primar-color-yellow;
+    }
+
+    &:active {
+        background-color: $darkorange ;
+    }
+    &:visited {
+        background-color: $darkorange;
+        color:$secondary-color-gray ;
+        a {
+            color:$secondary-color-gray ;}
+    }
+    &:hover {
+        background-color: $primar-color-yellow ;
+        a, span{
+        color:$secondary-color-gray ;}
+    }
+
 }
 
 .btn-primary-dark {

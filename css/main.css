@@ -94,6 +94,19 @@ button {
   cursor: pointer; }
   button a {
     text-decoration: none; }
+  button:focus {
+    border: 1px solid #FFF5A5; }
+  button:active {
+    background-color: #FF6464; }
+  button:visited {
+    background-color: #FF6464;
+    color: #364F6B; }
+    button:visited a {
+      color: #364F6B; }
+  button:hover {
+    background-color: #FFF5A5; }
+    button:hover a, button:hover span {
+      color: #364F6B; }
 
 .btn-primary-dark {
   border-color: #364F6B;

@@ -138,20 +138,20 @@
 	</section>
 	<section class="contact__form" id="contact">
 		
-		<form class="form"  name="form" name="contact" data-netlify="true" method="POST">
+		<form class="form" action="https://usebasin.com/f/12d793fb8b46"  name="form"  method="POST">
 			
 			<h1>İletişim Formu </h1>
 		<p>Bana ulaşmak istediğiniz zaman bu formu kullanabilir veya bana mail adresim olan ebruesraustuner@gmail.com 'e mail atarak ulaşabilirsiniz.</p>
 		<fieldset>
 				<label for="name">İsim Soyisim</label>
-				<input type="text" name="name" placeholder="Adınız ve Soyadınız">
+				<input type="text" id="name" name="name" placeholder="Adınız ve Soyadınız" required>
 			</fieldset>
 			<fieldset>
 				<label for="email">E-mail</label>
-				<input type="text" name="email" placeholder="e-mail adresiniz">
+				<input type="text" id="email" name="email" placeholder="e-mail adresiniz" required>
 			</fieldset>
 			<fieldset><label for="message">Mesajınız</label>
-				<textarea type="text" name="message" placeholder="Bana iletmek istediğinizi buraya yazabilirsiniz"></textarea>
+				<textarea type="text" id="message" name="message" placeholder="Bana iletmek istediğinizi buraya yazabilirsiniz" required></textarea>
 			</fieldset>
 			<div class="buttons">
 				<div class="buttons__socialmedias">
