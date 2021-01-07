@@ -1,0 +1,49 @@
+@import '../abstracts/variables.scss';
+.section__portfolio {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    background-image: url(../../img/abstracts/confetti.svg);
+    background-repeat: repeat;
+}
+.gallery {
+    width: 1036px;
+    margin: 96px 0;
+    padding: 5px;
+    background: transparent;
+  box-sizing: border-box;
+
+  }
+  
+  .gallery > div {
+    position: relative;
+    float: left;
+    padding: 4px;
+  }
+  
+  .gallery > div > img {
+    display: block;
+    width: 248px;
+    transition: .1s transform;
+    transform: translateZ(0); /* hack */
+  }
+  
+  .gallery > div:hover {
+    z-index: 1;
+  }
+  
+  .gallery > div:hover > img {
+    transform: scale(2.2,2.2);
+    transition: .3s transform;
+  }
+  
+  .bg:before, .bg:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  
+  .bg:after {
+    clear: both;
+  }

@@ -1,0 +1,155 @@
+/* colors */
+/* breakpoints */
+.section__nav {
+  background-color: lightgray;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: black;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+
+.navbar__logo {
+  position: fixed;
+  left: 64px;
+  top: 64px;
+  z-index: 9999;
+  cursor: pointer; }
+  @media (max-width: 50em) {
+    .navbar__logo {
+      left: 32px;
+      top: 32px; } }
+  @media (max-width: 37.5em) {
+    .navbar__logo {
+      left: 24px;
+      top: 24px; } }
+  .navbar__logo a {
+    display: flex; }
+    .navbar__logo a h2 {
+      font-size: 24px;
+      margin: 0; }
+    .navbar__logo a .light {
+      font-weight: 500; }
+.navbar__checkbox {
+  display: none; }
+.navbar__button {
+  background-color: transparent;
+  height: 64px;
+  width: 64px;
+  position: fixed;
+  top: 64px;
+  right: 48px;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer; }
+  @media (max-width: 50em) {
+    .navbar__button {
+      top: 32px;
+      right: 32px; } }
+  @media (max-width: 37.5em) {
+    .navbar__button {
+      top: 24px;
+      right: 24px; } }
+.navbar__background {
+  height: 64px;
+  width: 64px;
+  position: fixed;
+  top: 96px;
+  right: 96px;
+  background-image: transparent;
+  background-position: 0 0;
+  z-index: 1000;
+  transition: width 0.6s cubic-bezier(0.86, 0, 0.07, 1), height 0.6s cubic-bezier(0.86, 0, 0.07, 1), background-position 1s ease-in; }
+  @media (max-width: 37.5em) {
+    .navbar__background {
+      right: 8px; } }
+.navbar__nav {
+  z-index: -2;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  display: none;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.navbar__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+.navbar__item {
+  margin: 1rem; }
+.navbar__link:link, .navbar__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 220%;
+  transition: all .4s; }
+  .navbar__link:link span, .navbar__link:visited span {
+    margin-right: 1.5rem;
+    display: inline-block; }
+.navbar__link:hover, .navbar__link:active {
+  background-position: 100%;
+  color: #364F6B;
+  transform: translateX(1rem); }
+.navbar__checkbox:checked ~ .navbar__background {
+  width: calc(100% - 196px);
+  height: calc(100% - 196px);
+  background-image: linear-gradient(90deg, #FF6464, #FFAA64, #FF6464, #FFAA64);
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  transform-origin: bottom left; }
+  @media (max-width: 37.5em) {
+    .navbar__checkbox:checked ~ .navbar__background {
+      width: calc(100% - 16px);
+      height: calc(100% - 16px); } }
+.navbar__checkbox:checked ~ .navbar__nav {
+  opacity: 1;
+  width: 100%;
+  display: inline; }
+.navbar__icon {
+  position: relative;
+  margin-top: 0px; }
+  .navbar__icon, .navbar__icon::before, .navbar__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #4D4848;
+    display: inline-block; }
+  .navbar__icon::before, .navbar__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navbar__icon::before {
+    top: -.8rem; }
+  .navbar__icon::after {
+    top: .8rem; }
+.navbar__button:hover .navbar__icon::before {
+  top: -1rem; }
+.navbar__button:hover .navbar__icon::after {
+  top: 1rem; }
+.navbar__checkbox:checked + .navbar__button .navbar__icon {
+  background-color: transparent; }
+.navbar__checkbox:checked + .navbar__button .navbar__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+.navbar__checkbox:checked + .navbar__button .navbar__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
+/*# sourceMappingURL=nav.css.map */

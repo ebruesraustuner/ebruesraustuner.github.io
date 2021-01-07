@@ -1,1 +1,7 @@
-{"version":3,"sourceRoot":"","sources":["../../scss/abstracts/mixins.scss"],"names":[],"mappings":"AACA;AAiCA","file":"mixins.css"}
+{
+"version": 3,
+"mappings": "AACA,iBAAiB",
+"sources": ["../../scss/abstracts/mixins.scss"],
+"names": [],
+"file": "mixins.css"
+}

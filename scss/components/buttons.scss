@@ -1,0 +1,32 @@
+@import '../abstracts/variables.scss';
+
+button {
+    padding: .75em;
+    margin: .25em 0;
+    border: 1px solid;
+
+    a {
+        text-decoration: none;
+    }
+
+}
+
+.btn-primary-dark {
+    border-color: $secondary-color-gray;
+    background-color: $secondary-color-gray;
+    color: $primar-color-yellow;
+
+    a {
+        color: $primar-color-yellow;
+    }
+}
+
+.btn-primary-opacity {
+    border-color: $secondary-color-gray;
+    background-color: transparent;
+    color: $secondary-color-gray;
+
+    a {
+        color: $secondary-color-gray;
+    }
+}

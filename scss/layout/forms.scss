@@ -1,0 +1,20 @@
+@import '../abstracts/variables.scss';
+@import '../base/typography.scss';
+
+fieldset {
+    width: 100%;
+    margin: 16px 0 ;
+}
+label {
+    color: $secondary-color-gray;
+    font-family: $roboto;
+    font-weight: $light;
+    font-size: 22px;
+}
+
+input, textarea {
+    width: 100%;
+    border: 1px solid #707070;
+    padding: .75em;
+    box-shadow: 0 4px 12px rgba($color: #6D6D6D, $alpha: .3);
+}

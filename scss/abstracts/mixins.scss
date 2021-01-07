@@ -32,13 +32,6 @@
     }
 }
 
-/* last child */
-@mixin last-child() {
-    &:last-of-type {
-        @content
-    }
-}
-
 @mixin transition($transition) {
     transition: all .2s ease-in-out;
 }

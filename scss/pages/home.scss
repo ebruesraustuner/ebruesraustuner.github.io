@@ -1,0 +1,410 @@
+@import 'abstracts/variables.scss', 'abstracts/mixins.scss';
+@import 'base/typography.scss';
+
+* {
+    scroll-behavior: smooth;
+}
+
+.entries {
+    position: relative;
+
+    .section__entry {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: $primar-color-yellow;
+        background-image: url(../img/abstracts/confetti.svg);
+        width: 100%;
+        background-repeat: no-repeat;
+        padding: 64px;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+
+        @include breakpoint(tablet) {
+            flex-wrap: wrap;
+            padding: 24px;
+
+        }
+
+        &__welcome-img {
+            flex: 1;
+            align-self: center;
+            align-items: center;
+            align-content: center;
+            position: relative;
+            width: 100%;
+
+            .img-welcome {
+                background-color: transparent;
+                background-image: url(../img/abstracts/welcome.svg);
+                background-size: 480px 400px;
+                width: 480px;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-position: center center;
+                animation: entry .8s ease-in-out forwards;
+                opacity: 0;
+                max-width: 100%;
+
+                /*position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);*/
+                @include breakpoint(tablet) {
+                    background-size: 100% 100%;
+                    width: 300px;
+                    max-height: 300px;
+                    margin-top: 24px;
+                }
+            }
+        }
+
+        &__welcome-text {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            z-index: 4;
+        }
+    }
+
+    .section__break {
+        width: 100%;
+        position: relative;
+
+
+        &__image-1 {
+            width: 100%;
+            height: 24vh;
+            background-image: url(../img/abstracts/wave.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: inherit;
+            position: absolute;
+            bottom: 0;
+
+            @include breakpoint(mobile) {
+                height: 32vh;
+            }
+
+        }
+    }
+}
+
+.about-me {
+    height: 140vh;
+    position: relative;
+    background-image: url(../img/abstracts/portfolio-img-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+    .section__break {
+        width: 100%;
+
+        @include breakpoint(mobile) {
+            width: auto;
+        }
+
+        &__image-2 {
+            width: 100%;
+            height: 34vh;
+            background-image: url(../img/abstracts/wave-2.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @include breakpoint(mobile) {
+                height: 20vh;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 1080px;
+        margin: 136px 320px 0;
+
+        @include breakpoint(tablet) {
+            width: 100%;
+            padding: 32px 24px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            margin: 24px 0;
+
+            &__socialmedias {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: auto;
+                    height: 32px;
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+
+}
+
+.about-techinfo {
+    height: 140vh;
+    position: relative;
+    background-image: url(../img/abstracts/portfolio-img-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 1;
+
+    &__text {
+        max-width: 1080px;
+        margin: 0 320px 56px;
+
+        @include breakpoint(tablet) {
+            width: 100%;
+            padding: 24px;
+            margin: 8px;
+        }
+
+    }
+
+    &::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 46vh;
+        background-color: transparent;
+        background-image: url(../img/abstracts/wave-3-1.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+
+        @include breakpoint(mobile) {
+            height: 13vh;
+        }
+    }
+}
+
+.portfolios_break {
+    position: relative;
+
+
+    &::before {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 46vh;
+        background-color: transparent;
+        background-image: url(../img/abstracts/wave-3-2.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+
+        @include breakpoint(mobile) {
+            height: 16vh;
+        }
+    }
+
+    &::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 216px;
+        background-image: url(../img/abstracts/break-images-portfolio.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 4;
+        position: absolute;
+        top: -32px;
+
+        @include breakpoint(tablet) {
+            height: 136px;
+        }
+
+    }
+}
+
+.portfolios_gallery {
+    margin: 400px auto;
+    margin-bottom: 0;
+    position: relative;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        margin: 160px 0 0;
+    }
+
+    .grid-container {
+        max-width: 1080px;
+        margin: 96px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, auto));
+        grid-gap: 48px;
+
+
+        .images {
+            position: relative;
+
+            &__title {
+                font-size: 1.5em;
+                font-weight: bold;
+                text-decoration: none;
+                z-index: 3;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity .5s;
+                background: linear-gradient(transparent 50%, $darkorange);
+                color: white;
+                padding: 0 32px 32px 32px;
+
+                /* position the text in t’ middle*/
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                text-align: left;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+            }
+
+            &__image {
+                line-height: 0;
+                overflow: hidden;
+
+                img {
+                    filter: blur(1px);
+                    transition: filter 0.3s ease-in;
+                    transform: scale(1.1);
+
+                }
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &::after {
+        display: block;
+        content: '';
+        background-image: url(../img/abstracts/wave-4.svg);
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 240px;
+    }
+}
+
+.contact__form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+
+    &::before {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 46vh;
+        background-color: transparent;
+        background-image: url(../img/abstracts/wave-5.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1080px;
+        margin: 200px auto;
+        padding: 48px 0;
+
+        @include breakpoint(mobile) {
+            padding: 32px;
+        }
+
+        p {
+            font-weight: $semibold;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            margin: 24px 0;
+            width: 100%;
+
+            &__socialmedias {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: auto;
+                    height: 32px;
+                    padding-right: 8px;
+                }
+            }
+        }
+
+    }
+}
+
+@keyframes entry {
+    0% {
+        opacity: 0;
+        transform: scale(.4);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

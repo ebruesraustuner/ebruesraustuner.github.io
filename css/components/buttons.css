@@ -1,0 +1,23 @@
+/* colors */
+button {
+  padding: .75em;
+  margin: .25em 0;
+  border: 1px solid; }
+  button a {
+    text-decoration: none; }
+
+.btn-primary-dark {
+  border-color: #364F6B;
+  background-color: #364F6B;
+  color: #FFF5A5; }
+  .btn-primary-dark a {
+    color: #FFF5A5; }
+
+.btn-primary-opacity {
+  border-color: #364F6B;
+  background-color: transparent;
+  color: #364F6B; }
+  .btn-primary-opacity a {
+    color: #364F6B; }
+
+/*# sourceMappingURL=buttons.css.map */

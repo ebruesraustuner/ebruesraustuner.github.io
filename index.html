@@ -1,287 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<title>Ebru Esra Üstüner || Portfolyo </title>
-	<meta property="og:description" name="description" content="UI/UX dünyasıyla ilgilenen bir Front End Developer'ın dünyası">
+	<meta property="og:description" name="description" content="Front End Developer'ın dünyası">
 	<meta name="keywords" content="Portfolyo, HTML, CSS, Front-end, UI, UI/UX, AdobeXD">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="./css/main.css" rel="stylesheet" type="text/css">
-	<link href="./img/flower-logo-favicon.png" rel="icon" type="image/png">
-	<script src="/js/modal.js"></script>
-
-	<script src="/js/vue-example.js"></script>
-	<script src="/js/vue.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88286499-2"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-88286499-2');
-	</script>
-
 </head>
 
 <body>
-	<section>
-		<div class="main">
-			<div class="content">
-				<div class="border-box white">
-					<div class="border-box-section">
-						<div role="main" class="homepage" id="homepage">
-							<div class="navbar">
-								<div class="logo">
-									<!-- <a href="#homepage">logo</a>
-									--><!-- 
-									
-									<img sizes="(min-width: 400px) 96vw, 100vw" srcset="/img/logo-small.png 480w,
-											/img/logo-medium.png 2600w" alt="Ebru Esra Üstüner">-->
-										<!-- 	<a href="#homepage">Ebru Esra</a>-->
-										
-									<img src="img/flower-logo.png" width="65%" alt="Ebru Esra Üstüner">
-								
-								</div>
-								<div class="links">
-									<div class="navbutton">
-										<label for="navcheck">
-											<span></span>
-											<span></span>
-											<span></span>
-										</label>
-									</div>
-									<input type="checkbox" id="navcheck" class="navcheck" />
-									<label class="navlinks">
-										<ul>
-											<li>
-												<a href="#aboutme"> Hakkımda </a>
-											</li>
-											<li>
-												<a href="#techinfo"> Teknik Bilgilerim </a>
-											</li>
-											<li>
-												<a href="#examples"> Örneklerim </a>
-											</li>
-										</ul>
-									</label>
-								</div>
-							</div>
-							<section class="about">
-								<article class="softbox">
-									<h2>Merhabalar,<br> Ben Ebru Esra</h2>
-									<p>UI Developer olmak isteyen bir Front-end developer'ım. <br>
-										Kodlamayı, tasarım yapmayı çok severim bunların yanısıra Hayal kurmayı seven,
-										müziksiz yapamayan birisiyim.
-
-									</p>
-								</article>
-							</section>
-							<section class="squares">
-								<div class="square blue"></div>
-								<div class="square purple"></div>
-								<div class="square pink"></div>
-							</section>
-						</div>
-					</div>
-				</div>
+	<section class="entries" id="entry">
+		<div class="section__nav">
+			<div class="navbar">
+				<div class="navbar__logo"><a href="#entry"><h2 class="light">EbruEsra</h2><h2>Üstüner</h2></a></div>
+				<input type="checkbox" class="navbar__checkbox" id="navbar__check">
+				<label for="navbar__check" class="navbar__button">
+					<span class="navbar__icon">&nbsp;</span>
+				</label>
+				<div class="navbar__background">&nbsp;</div>
+				<nav class="navbar__nav">
+					<ul class="navbar__list">
+						<li class="navbar__item"><a href="#entry" class="navbar__link"><span>Anasayfa</span></a></li>
+						<li class="navbar__item"><a href="#about" class="navbar__link"><span>Hakkımda</span></a></li>
+						<li class="navbar__item"><a href="#portfolios" class="navbar__link"><span>Portfolyo</span></a></li>
+						<li class="navbar__item"><a href="#contact" class="navbar__link"><span>İletişim Formu</span></a></li>
+					</ul>
+				</nav>
+				</label>
 			</div>
-			<div class="content">
-				<div class="border-box gradient">
-					<div class="border-box-section">
-						<div role="definition" #aboutme id="aboutme" class="aboutme">
-							<div class="about">
-								<div class="softbox big">
-									<article>
-										<h1>Hakkımda</h1>
-										<p>Mühendislik Fakültesini bitirdikten sonra bilişim sektörüne girmeyi istedim.
-											'ne
-											nedir, ne değildir ? ' sorularına cevap aradım,
-											Kurslara gittim, araştırmalar yaptım, Web dünyasına giriş yaptım.
-										</p>
-										<p>Kendimi Front-end develop bölümünde buldum.Daha sonrasında kariyerime
-											başladım,
-											kendi yolumda yürüdüm de yürüdüm. </p>
-										<p>Arayüz Tasarımda, sayfalar tasarlayarak ilerliyorum.</p>
-									</article>
-								</div>
-								<div class="linksbutton">
-									<label for="linkscheck">
-										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-											viewBox="0 0 24 24">
-											<path d="M0 0h24v24H0z" fill="none" />
-											<path
-												d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" />
-										</svg>
-									</label>
-								</div>
-								<input type="checkbox" id="linkscheck" class="linkscheck" />
-
-								<label class="buttons">
-									<a type="button" class="button button-rectangle" href="Resume-EbruEsra.pdf"
-										target="_blank">Özgeçmiş
-										İndir</a>
-
-									<div class="socialmedias">
-										<a type="button" class="button button-square"
-											href="https://github.com/ebruesraustuner" target="_blank">
-											<img src="/img/Socialmedias/GitHub-Mark-32px.png" alt="GitHub">
-										</a>
-										<a type="button" class="button button-square"
-											href="https://dribbble.com/ebruesra" target="_blank">
-											<img src="/img/Socialmedias/dribbble-ball-mark.png" width="32px"
-												alt="Dribbble">
-										</a>
-										<a type="button" class="button button-square"
-											href="https://codepen.io/lovelyalchemist" target="_blank">
-											<img src="/img/Socialmedias/Button-Black-Large.png" width="32px"
-												alt="CodePen">
-										</a>
-										<a type="button" class="button button-square"
-											href="https://www.linkedin.com/in/ebru-%C3%BCst%C3%BCner-019aa297/"
-											target="_blank">
-											<img src="/img/Socialmedias/LI-In-Bug.png" width="32px" alt="LinkedIn">
-										</a>
-									</div>
-								</label>
-							</div>
-							<section class="squares rotate">
-								<div class="square blue"></div>
-								<div class="square purple"></div>
-								<div class="square pink"></div>
-							</section>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="content">
-				<div class="border-box gradient-rotate">
-					<div class="border-box-section">
-						<section class="tech-info" id="techinfo">
-							<div class="content">
-								<div class="icon-box"></div>
-								<article role="definition" class="info">
-									<p>Kullandığım Tasarım Araçları;</p>
-									<br>
-									<ul>
-										<li>Adobe XD</li>
-										<li>Sketch</li>
-										<li>Gravit Designer</li>
-										<li>Adobe Photoshop</li>
-										<li>Adobe Illustrator</li>
-									</ul>
-								</article>
-							</div>
-							<div class="content">
-								<div class="icon-box"></div>
-								<article role="definition" class="info">
-									<p>İşin Yazılım kısmında ise; </p>
-									<br>
-									<ul>
-										<li>Html&Css</li>
-										<li>AngularJS</li>
-										<li>VueJS</li>
-										<li>Angular</li>
-
-									</ul>
-								</article>
-							</div>
-							<div class="content">
-								<div class="icon-box"></div>
-								<article role="definition" class="info">
-									<p>Okumayı sevdiğimden yazılımla ilgili olarak yayımlanmış makalelere göz gezdirir,
-										ne nasıl ve doğru şekilde yapılır gibi yazıları okurum.
-
-										Görsel hazinemi geliştirmek içinde, dribble, behance gibi yerleri gözden
-										geçirir, kendime ilham kaynağı oluştururum.</p>
-								</article>
-							</div>
-						</section>
-					</div>
-				</div>
-			</div>
-			<div class="content">
-				<div class="border-box white">
-					<div class="border-box-section">
-						<div class="examples" id="examples">
-							<div class="example">
-								<a type="button" class="softbox" href="/examples/example-projects.html">
-									<p>
-										Yer aldığım projelerden görüntüler
-									</p>
-									<span class="arrow">
-										&#8407;
-									</span>
-								</a>
-							</div>
-							<div class="example">
-								<a type="button" class="softbox" href="/examples/example-mobile.html">
-									<p>
-										Mobil Prototip
-									</p>
-									<span class="arrow">
-										&#8407;
-									</span>
-								</a>
-							</div>
-							<div class="example">
-								<a type="button" class="softbox" href="/examples/example-banner.html">
-									<p>
-										Banner Örnekleri
-									</p>
-									<span class="arrow">
-										&#8407;
-									</span>
-								</a>
-							</div>
-							<div class="example">
-								<a type="button" class="softbox" href="https://recipeappwithvuejs.netlify.app/" target="_blank">
-									<p>
-										VueJS ile Tarifler
-									</p>
-									<span class="arrow">
-										&#8407;
-									</span>
-								</a>
-							</div>
-							<div class="example">
-								<a type="button" class="softbox" href="https://shoppingcartvuejs.netlify.app/">
-									<p>
-										VueJs ile Alışveriş Sepeti
-									</p>
-									<span class="arrow">
-										&#8407;
-									</span>
-								</a>
-							</div>
-							
-							<div class="example">
-								<a type="button" class="softbox" href="http://searchgiphyapi.netlify.com"
-									target="_blank">
-									<p>
-										VueJS ile Gif Araması Yapmak
-									</p>
-									<span class="arrow">
-										&#8407;
-									</span>
-								</a>
-							</div>
-						</div>
-						<footer>
-							<div class="footer">
-								<p>Made with &hearts;</p>
-								<p>ebruesraustuner@gmail.com</p>
-							</div>
-						</footer>
-					</div>
-				</div>
-			</div>
-			<a href="#homepage" type="button" class="button button-square bottom-right">&uarr;</a>
 		</div>
+		<div class="section__entry">
+			<div class="section__entry__welcome-img">
+				<div class="img-welcome"></div>
+			</div>
+			<div class="section__entry__welcome-text">
+				<h1>Merhaba, Ben Ebru Esra</h1>
+				<p>Front-end Developer'ım</p>
+				<div class="buttons">
+					<button type="button" class="btn btn-primary-opacity"><a href="#portolios">Portfolyom</a></button>
+					<button type="button" class="btn btn-primary-dark"><a href="#contact">İletişim Formu</a></button>
+				</div>
+			</div>
+		</div>
+		<div class="section__break">
+			<div class="section__break__image-1"></div>
+		</div>
+	</section>
+	<section class="about-me" id="about">
+		<div class="section__break">
+			<div class="section__break__image-2"></div>
+		</div>
+		<div class="about-me__text">
+			<h1>Ben Kimim?</h1>
+			<p><b>Merhabalar Ben Ebru Esra</b></p>
+			<p>Ankara'da yaşıyorum. Tekstil Mühendisliği mezunuyum ama benim istediğimin yazılım sektörü olduğuna karar verdim. İlerlemek için kursa gittim, temel bilgileri öğrenmeye başladım. Web dünyası sayesinde kendimi ilerletmeye başladım. Sonrasında da kendimi Front End Dünyasında buldum. 
+				Üniversite hayatımdan şu yaşıma kadar eşlik etmiş olan yegane şeyler anime izlemek, manga okumak oldu. Çocukluğumdan bu yana da kitap okumayı hep sevmişimdir. Son olarak da hayatıma çeşitli dillerde müzikler eşlik ediyor.</p>
+			<div class="buttons">
+				<div class="buttons__socialmedias">
+					<a href="https://codepen.io/lovelyalchemist" target="_blank">
+					<img src="./img/logos/Button-Black-Large.png" /></a>
+					<a href="https://dribbble.com/ebruesra" target="_blank"><img src="./img/logos/dribbble-logo.png" /></a>
+					<a href="https://github.com/ebruesraustuner" target="_blank"><img src="./img/logos/GitHub-Mark-64px.png" /></a>
+					<a href="https://www.linkedin.com/in/ebru-%C3%BCst%C3%BCner-019aa297/" target="_blank"><img src="./img/logos/Linkedin-logo.png" /></a>
+
+				</div>
+				<div class="buttons__download">
+					<button type="button" class="btn btn-primary-dark"><a href="Resume-EbruEsra.pdf">Özgeçmiş İndir</a></button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about-techinfo">
+		<div class="about-techinfo__text">
+			<h1>Neler Biliyorum</h1>
+			<p>Her şeyi öğrenmeye notepad üzerinde html&css yazarak başladım,
+				Photoshop, Illustrator gibi programları öğrendikten sonra artık editörlerlerde çalışmaya başladımŞimdi de VS code ile devam ediyorum.
+				
+				Zamanla kullanıcı deneyimini de merak ettim ve öğrendim. Pek çok makale okuyup, görsel anlamda da kendimi iyileştirdim.
+				
+				HTML&Css öğrendikten sonra hayatıma SCSS girdi. 
+				Bir yandan da VueJS öğrendim. Girdiğim çalışma hayatı gereği Angular'ı da öğrendim. E tabi devamında AngularJS kavramı da geldi onu da öğrenmeye başladım. 
+				
+				Görsel çalışmaları sevdiğim içinde AdobeXD, figma ve sketch gibi programları öğrendim. </p>
+		</div>
+	</section>
+	<section class="portfolios_break">
+
+	</section>
+	<section class="portfolios_gallery" id="portolios">
+		<h1>Yaptığım Çalışmalar</h1>
+		<div class="grid-container">
+			<article class="images">
+				<a href="http://recipeappwithvuejs.netlify.app" target="_blank" class="images__title">Vuejs ile yaptığım Tarif Sitesi</a>
+
+				<div class="images__image">
+					<img src="img/portfolios/Portfolio-img-examplespr-4.jpg" width="360" alt="example 1">
+				</div>
+			</article>
+			<article class="images">
+				<a href="https://shoppingcartvuejs.netlify.app/" target="_blank" class="images__title">VueJs ile Alışveriş Sepeti</a>
+
+				<div class="images__image">
+					<img src="img/portfolios/Portfolio-img-examplespr-5.jpg" width="320" alt="example 1">
+				</div>
+			</article>
+			<article class="images">
+				<a href="https://searchgiphyapi.netlify.app/" target="_blank" class="images__title">Vuejs İle Gif Arama</a>
+
+				<div class="images__image">
+					<img src="img/portfolios/Portfolio-img-examplespr-6.jpg" width="320" alt="example 1">
+				</div>
+			</article>
+			<article class="images">
+				<a href="examplepages/banners.html" class="images__title">Banner Örnekleri</a>
+
+				<div class="images__image">
+					<img src="img/portfolios/Portfolio-img-examplespr-3.jpg" width="320"  alt="example 1">
+				</div>
+			</article>
+			<article class="images">
+				<a href="examplepages/mobile.html" class="images__title">Mobil Prototip Örnekleri</a>
+
+				<div class="images__image">
+					<img src="img/portfolios/Portfolio-img-examplespr-2.jpg" width="320" alt="example 1">
+				</div>
+			</article>
+			<article class="images">
+				<a href="examplepages/projects.html" class="images__title">Yaptığım Projelerden Örnekler</a>
+
+				<div class="images__image">
+					<img src="img/portfolios/Portfolio-img-examplespr-1.jpg" width="320"  alt="example 1">
+				</div>
+			</article>
+		</div>
+	</section>
+	<section class="contact__form" id="contact">
+		
+		<form class="form"  name="contactForm" method="post" @submit="contactForm" novalidate="true">
+			<h1>İletişim Formu </h1>
+		<p>Bana ulaşmak istediğiniz zaman bu formu kullanabilir veya bana mail adresim olan ebruesraustuner@gmail.com 'e mail atarak ulaşabilirsiniz.</p>
+		<fieldset>
+				<label>İsim Soyisim</label>
+				<input type="text" placeholder="Adınız ve Soyadınız">
+			</fieldset>
+			<fieldset>
+				<label>E-mail</label>
+				<input type="text" placeholder="e-mail adresiniz">
+			</fieldset>
+			<fieldset><label>Mesajınız</label>
+				<textarea type="text" placeholder="Bana iletmek istediğinizi buraya yazabilirsiniz"></textarea>
+			</fieldset>
+			<div class="buttons">
+				<div class="buttons__socialmedias">
+					<a href="https://codepen.io/lovelyalchemist" target="_blank">
+					<img src="./img/logos/Button-Black-Large.png" /></a>
+					<a href="https://dribbble.com/ebruesra" target="_blank"><img src="./img/logos/dribbble-logo.png" /></a>
+					<a href="https://github.com/ebruesraustuner" target="_blank"><img src="./img/logos/GitHub-Mark-64px.png" /></a>
+					<a href="https://www.linkedin.com/in/ebru-%C3%BCst%C3%BCner-019aa297/" target="_blank"><img src="./img/logos/Linkedin-logo.png" /></a>
+
+				</div>
+				<div class="buttons__send">
+					<button type="button" class="btn btn-primary-dark"><span>Gönder</span></button>
+				</div>
+			</div>
+
+		</form>
 	</section>
 </body>
 
