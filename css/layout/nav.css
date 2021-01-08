@@ -91,14 +91,15 @@
   margin: 1rem; }
 .navbar__link:link, .navbar__link:visited {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 34px;
+  line-height: 1.5;
   font-weight: 300;
   padding: 1rem 2rem;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
-  background-size: 220%;
+  background-size: 230%;
   transition: all .4s; }
   .navbar__link:link span, .navbar__link:visited span {
     margin-right: 1.5rem;
@@ -106,7 +107,7 @@
 .navbar__link:hover, .navbar__link:active {
   background-position: 100%;
   color: #364F6B;
-  transform: translateX(1rem); }
+  /* transform: translateX(1rem);*/ }
 .navbar__checkbox:checked ~ .navbar__background {
   width: calc(100% - 196px);
   height: calc(100% - 196px);
