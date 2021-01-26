@@ -221,7 +221,7 @@
         display: block;
         content: '';
         width: 100%;
-        height: 46vh;
+        height: 30vh;
         background-color: $primar-color-yellow;
         background-image: url(../img/abstracts/wave-3-2.svg);
         background-size: cover;
@@ -240,7 +240,7 @@
         display: block;
         content: '';
         width: 100%;
-        height: 216px;
+        height: 116px;
         background-color:transparent;
         background-image: url(../img/abstracts/break-images-portfolio.svg);
         background-size: contain;
@@ -258,7 +258,8 @@
 }
 
 .portfolios_gallery {
-    margin: 300px auto;
+    margin: 194px auto;
+    padding-top: 48px;
     margin-bottom: 0;
     position: relative;
     text-align: center;
@@ -266,7 +267,7 @@
     color: $black;
 
     @include breakpoint(mobile) {
-        margin: 160px 0 0;
+        margin: 80px 0 0;
     }
 
     .galleries {
@@ -275,6 +276,9 @@
         grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
         grid-gap: 64px;
         list-style: none;
+        @include breakpoint(mobile) {
+            grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+        }
         h4 {
             font-size: 16px;
         }
@@ -290,7 +294,10 @@
             padding: 16px;
             border-radius: 12px;
             box-shadow: 6px 6px 10px 1px rgba($secondary-color-gray, $alpha: .2) ;
-        &__imagepart {
+            @include breakpoint(mobile) {
+                flex-wrap: wrap;
+            }
+            &__imagepart {
             //height: 196px;
             clip-path: circle(40% at center);
             img {
@@ -371,7 +378,7 @@
         background-position: bottom;
         background-repeat: no-repeat;
         width: 100%;
-        height: 240px;
+        height: 120px;
     }
 }
 
@@ -403,7 +410,7 @@
         justify-content: center;
         flex-wrap: wrap;
         max-width: 1080px;
-        margin: 200px auto;
+        margin: 200px 16px 0;
         padding: 48px 0;
 
         @include breakpoint(mobile) {
@@ -436,6 +443,12 @@
         }
 
     }
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
 }
 
 @keyframes entry {
