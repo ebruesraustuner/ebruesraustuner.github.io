@@ -45,10 +45,21 @@ h3 {
 
 }
 
-h4, p {
+h4  {
+    font-family: $roboto;
+    font-weight: $medium;
+    font-size: 18px;
+    color: $black;
+    line-height: 1.5;
+    @include breakpoint(mobile) {
+        font-size: 18px;
+    }
+}
+
+p {
     font-family: $roboto;
     font-weight: $light;
-    font-size: 22px;
+    font-size: 18px;
     color: $black;
     line-height: 1.5;
     @include breakpoint(mobile) {

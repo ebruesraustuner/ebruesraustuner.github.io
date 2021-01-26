@@ -33,14 +33,24 @@ h3 {
     h3 {
       font-size: 24px; } }
 
-h4, p {
+h4 {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 22px;
+  font-weight: 500;
+  font-size: 18px;
   color: #4D4848;
   line-height: 1.5; }
   @media (max-width: 37.5em) {
-    h4, p {
+    h4 {
+      font-size: 18px; } }
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #4D4848;
+  line-height: 1.5; }
+  @media (max-width: 37.5em) {
+    p {
       font-size: 18px; } }
 
 * {
@@ -216,7 +226,7 @@ transform: translate(-50%, -50%);*/ }
     content: '';
     width: 100%;
     height: 46vh;
-    background-color: transparent;
+    background-color: #FFF5A5;
     background-image: url(../img/abstracts/wave-3-2.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -232,6 +242,7 @@ transform: translate(-50%, -50%);*/ }
     content: '';
     width: 100%;
     height: 216px;
+    background-color: transparent;
     background-image: url(../img/abstracts/break-images-portfolio.svg);
     background-size: contain;
     background-position: center;
@@ -244,13 +255,42 @@ transform: translate(-50%, -50%);*/ }
         height: 136px; } }
 
 .portfolios_gallery {
-  margin: 400px auto;
+  margin: 300px auto;
   margin-bottom: 0;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  background-color: #FFF5A5;
+  color: #4D4848; }
   @media (max-width: 37.5em) {
     .portfolios_gallery {
       margin: 160px 0 0; } }
+  .portfolios_gallery .galleries {
+    margin: 64px 64px 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+    grid-gap: 64px;
+    list-style: none; }
+    .portfolios_gallery .galleries h4 {
+      font-size: 16px; }
+    .portfolios_gallery .galleries p {
+      font-size: 14px; }
+    .portfolios_gallery .galleries__card {
+      display: flex;
+      flex-wrap: revert;
+      flex-direction: row;
+      justify-content: center;
+      background-color: white;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 6px 6px 10px 1px rgba(54, 79, 107, 0.2); }
+      .portfolios_gallery .galleries__card__imagepart {
+        clip-path: circle(40% at center); }
+        .portfolios_gallery .galleries__card__imagepart img {
+          max-width: 112px;
+          object-fit: scale-down;
+          height: auto; }
+      .portfolios_gallery .galleries__card__descpart {
+        padding: 8px; }
   .portfolios_gallery .grid-container {
     max-width: 1080px;
     margin: 96px auto;
