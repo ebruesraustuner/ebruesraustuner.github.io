@@ -285,7 +285,26 @@
         p {
             font-size: 14px;
         }
+        .wrap {
+            background-image: linear-gradient(45deg, transparent 0%, transparent 50%, white 50%);
+            background-size: 0%;
+            transition: all 2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            &:hover {
+                background-image: linear-gradient(90deg, transparent 20%, transparent 40%, $darkorange 20%, $lightorange,);
+                background-size: 700% 100%;
+        background-position: 100% 0;
+    
+
+            }
+
+        }
         &__card {
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
             display: flex;
             flex-wrap: revert;
             flex-direction: row;
@@ -294,9 +313,11 @@
             padding: 16px;
             border-radius: 12px;
             box-shadow: 6px 6px 10px 1px rgba($secondary-color-gray, $alpha: .2) ;
+           // border: 4px solid purple;
             @include breakpoint(mobile) {
                 flex-wrap: wrap;
             }
+           
             &__imagepart {
             //height: 196px;
             clip-path: circle(40% at center);
